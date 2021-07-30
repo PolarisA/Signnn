@@ -21,6 +21,8 @@ import {
 
 const ios = Platform.OS === 'ios';
 
+const SIGN_URL = 'https://shuanglu.dgwfund.cn';
+
 class App extends Component {
   constructor (props) {
     super(props);
@@ -33,8 +35,10 @@ class App extends Component {
   onGoSignPage () {
     console.log('===== onGoSignPage');
     const params = {
-      no: 'NB1000000001',
+      appointNo: 'NB1000000001',
       phone: '15354872767',
+      extId: 1,
+      signUrl: SIGN_URL,
     };
 
     if (!ios) {
